@@ -1,0 +1,26 @@
+<div class="center" style="    margin-top: -13%;">
+    <div class="fider">
+        <h1>Find GitHub User</h1>
+    </div>
+    <div class="search">
+        <div class="pseudo-search search-container">
+
+            <input (input)="onSearch($event)" type="text" id="userInput" placeholder="GitHub User">
+            <i class='fa fa-github' style="    margin: 4px;"></i>
+            <i class='fa fa-search'></i>
+        </div>
+    </div>
+    <div id="userContainer"></div>
+
+</div>
+
+<div class="container-data" style="margin-top: 18%; display: flex;
+    justify-content: center;">
+    <div *ngIf="us">
+        <app-card [user]="user"></app-card>
+    </div>
+
+    <div *ngIf="!us || user == {}" style="display: flex; justify-content: center;">
+        <h4>No hay ningún usuario disponible.</h4>
+    </div>
+</div>

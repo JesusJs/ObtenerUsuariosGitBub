@@ -1,0 +1,46 @@
+<div class="card green">
+    <div class="additional">
+        <div class="user-card">
+            <div class="space">
+                <h3 class="level">{{user.login}}</h3>
+            </div>
+            <img class="round" [src]="user.avatar_url" height="110" width="100%" sty alt="User Avatar">
+            <div class="space">
+                <span class="level" style="margin-top: 4%;">{{user.created_at | date}}</span>
+            </div>
+        </div>
+        <div class="more-info">
+            <h1 style="font-size: 21px; margin-top: 25px;">{{user.name}}</h1>
+            <div class="location">
+                <div>
+                    <p class="value"> <i class='fa-solid fa-location-dot' style='color: white'></i> {{user.location}}</p>
+                </div>
+                <div>
+                    <p class="value"><i class='fa fa-twitter' style='color: white'></i> @{{user.twitter_username}}</p>
+                </div>
+            </div>
+            <div class="coords center">
+                <a href=""><i class='fas fa-blog' style='color: white'></i> {{user.blog}}</a>
+            </div>
+            <div class="stats">
+                <div>
+                    <div class="title" style=" color: white;">REPOS</div>
+                    <i class='fa-solid fa-code-merge' style='color: white; transform: rotate(-363deg);'></i>
+                    <div class="value" style=" color: white;">
+                        {{user.public_repos}}</div>
+                </div>
+                <div>
+                    <div class="title" style=" color: white;">FOLLOWERS</div>
+                    <i class='fa fa-users' style='color: white'></i>
+                    <div class="value" style=" color: white;"> {{user.followers}}</div>
+                </div>
+                <div>
+                    <div class="title" style=" color: white;">Following</div>
+                    <i class='fas fa-user-friends' style='color: white'></i>
+                    <div class="value" style=" color: white;">
+                        {{user.following}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
