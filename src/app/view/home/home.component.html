@@ -16,11 +16,11 @@
 
 <div class="container-data" style="margin-top: 18%; display: flex;
     justify-content: center;">
-    <div *ngIf="us">
+    <div *ngIf="us == true && user ">
         <app-card [user]="user"></app-card>
     </div>
 
-    <div *ngIf="!us || user == {}" style="display: flex; justify-content: center;">
-        <h4>No hay ningún usuario disponible.</h4>
+    <div *ngIf="error && us == false" style="display: flex; justify-content: center;">
+        <app-not-found></app-not-found>
     </div>
 </div>

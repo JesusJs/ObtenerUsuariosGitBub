@@ -20,16 +20,20 @@ export class HomeComponent implements OnInit {
   
   onSearch(event: any) {
     const nombreUsuario = event.target.value;
-    this.githubService.getUser(nombreUsuario)
+    this.githubService.getUser(nombreUsuario).pipe(
+      catchError(err => {
+      this.user = {};
+      this.error = true;
+      this.us =false;
+      return EMPTY;
+      })
+    )
     .subscribe( data=> {this.user =data
       if (data) {
         this.user = data;
         this.us = true;
-      } else {
-        this.user = {};
-        this.us = false;
-      }
-    
+        console.log(data);
+      } 
     });
      }
      

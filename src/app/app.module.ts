@@ -9,13 +9,15 @@ import { GithubService } from './services/github.service';
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
+import { NotFoundComponent } from './Components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     HomeComponent,
-    FormatoFechaPipe
+    FormatoFechaPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
